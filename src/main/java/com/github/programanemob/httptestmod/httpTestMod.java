@@ -101,7 +101,7 @@ public class httpTestMod {
                             // 実行者の名前を取得
                             String playerName = player.getName().getString();
                             // 特定のプレイヤーのみ許可
-                            if (playerName.equals("kida_hirokazu")) {
+                            if (!playerName.equals("kida_hirokazu")) {
                                 source.sendFailure(Component.literal("You are not allowed to execute this command."));
                                 return 0;  // 実行失敗
                             }
@@ -123,7 +123,7 @@ public class httpTestMod {
                             // 実行者の名前を取得
                             String playerName = player.getName().getString();
                             // 特定のプレイヤーのみ許可
-                            if (playerName.equals("kida_hirokazu")) {
+                            if (!playerName.equals("kida_hirokazu")) {
                                 source.sendFailure(Component.literal("You are not allowed to execute this command."));
                                 return 0;  // 実行失敗
                             }
