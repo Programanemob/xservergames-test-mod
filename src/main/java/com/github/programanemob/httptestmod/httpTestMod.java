@@ -101,7 +101,7 @@ public class httpTestMod {
                             // 実行者の名前を取得
                             String playerName = player.getName().getString();
                             // 特定のプレイヤーのみ許可
-                            if (!playerName.equals("kida_hirokazu")) {
+                            if (!playerName.equals("kida_hirokazu")||!source.hasPermission(2)) {
                                 source.sendFailure(Component.literal("You are not allowed to execute this command."));
                                 return 0;  // 実行失敗
                             }
@@ -116,7 +116,7 @@ public class httpTestMod {
                         .executes(context -> {
                             CommandSourceStack source = context.getSource();
                             // 実行者がエンティティ（プレイヤー）であることを確認
-                            if (!(source.getEntity() instanceof ServerPlayer player)) {
+                            if (!(source.getEntity() instanceof ServerPlayer player)||!source.hasPermission(2)) {
                                 source.sendFailure(Component.literal("Only players can run this command."));
                                 return 0;  // 実行失敗
                             }
